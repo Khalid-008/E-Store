@@ -9,13 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Interface\" />
-    <Folder Include="Infrastructure\Implementation\" />
-    <Folder Include="Repository\Interface\" />
-    <Folder Include="Repository\Implementation\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -26,6 +19,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-Store.Domain\E-Store.Domain.csproj" />
+    <ProjectReference Include="..\E-Store.EF\E-Store.EF.csproj" />
   </ItemGroup>
 
 </Project>
