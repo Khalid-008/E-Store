@@ -1,4 +1,4 @@
-using E_Store.Data;
+using E_Store.EF.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
