@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-E_Store-2C92424A-9D3E-4D83-BE25-1A89ACD8D9FA</UserSecretsId>
+    <RootNamespace>E_Store.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-Store.Domain\E-Store.Domain.csproj" />
+    <ProjectReference Include="..\E-Store.EF\E-Store.EF.csproj" />
+    <ProjectReference Include="..\E-Store.Repository\E-Store.Repository.csproj" />
+    <ProjectReference Include="..\E.Store.ViewModel\E.Store.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>
