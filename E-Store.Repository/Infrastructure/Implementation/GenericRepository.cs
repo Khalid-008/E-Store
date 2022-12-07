@@ -1,5 +1,6 @@
 ﻿using E_Store.EF.Data;
 using E_Store.Repository.Infrastructure.Interface;
+using System.Data.Entity.Migrations;
 
 namespace E_Store.Repository.Infrastructure.Implementation
 {
@@ -30,14 +31,15 @@ namespace E_Store.Repository.Infrastructure.Implementation
             return context.Set<T>().Find(id);
         }
 
-        public void Remove(T obj)
+        public void delete(int id)
         {
-            context.Set<T>().Remove(obj);
+            var item = context.Set<T>().Find(id);
+            context.Set<T>().Remove(item);
         }
 
-        public void update(T obj)
+        public void updateById(T obj)
         {
-            context.Set<T>().Update(obj);
+            context.Set<T>().AddOrUpdate(obj);
         }
     }
 }

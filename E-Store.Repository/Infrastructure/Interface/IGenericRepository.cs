@@ -8,8 +8,8 @@
 
         void Add(T obj);
 
-        void update(T obj);
+        void updateById(T obj);
 
-        void Remove(T obj);
+        void delete(int id);
     }
 }

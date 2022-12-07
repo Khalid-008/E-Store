@@ -1,5 +1,4 @@
-﻿using E_Store.Domain.Models;
-using E_Store.Repository.Infrastructure.Interface;
+﻿using E_Store.Repository.Infrastructure.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Store.Controllers
@@ -17,13 +16,7 @@ namespace E_Store.Controllers
 
         public IActionResult Index()
         {
-            Product product = new Product()
-            {
-                Name = "item1",
-                Description = "New"
-            };
-
-            unitOfWork.ProductRepository.Add(product);
+            unitOfWork.ProductRepository.delete(1);
             unitOfWork.save();
             return View();
         }
